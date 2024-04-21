@@ -1,5 +1,5 @@
 {
-  "name": "command-bus-nodejs",
+  "name": "@bactv/command-bus-nodejs",
   "version": "1.0.0",
   "description": "Command bus pattern for NodeJs",
   "main": "main.js",
