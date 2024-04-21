@@ -11,7 +11,7 @@ export default class CommandBus {
         this._handlerList.push(handler);
     }
 
-    dispatch(command: Command, middlewares: Middleware[] = []): any {
+    async dispatch(command: Command, middlewares: Middleware[] = []): Promise<any> {
         // run middlewares
         while (middlewares.length > 0) {
             const middleware = middlewares.shift();
@@ -27,8 +27,10 @@ export default class CommandBus {
             const handler = this._handlerList.pop();
 
             if (handler) {
-                return handler.handle(command);
+                return await handler.handle(command);
             } 
         }
+
+        return null;
     }
 }
