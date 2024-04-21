@@ -27,7 +27,7 @@ export default class CommandBus {
             const handler = this._handlerList.pop();
 
             if (handler) {
-                handler.handle(command);
+                return handler.handle(command);
             } 
         }
     }

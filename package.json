@@ -1,6 +1,6 @@
 {
   "name": "@bactv/command-bus-nodejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Command bus pattern for NodeJs",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
